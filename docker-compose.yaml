@@ -4,8 +4,10 @@ services:
   app:
     image: icod/simple-app-irfan
     build: ./app
-    ports: -"3000:3000"
-    volumes: -"vol-simple:/app/public/images/"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "vol-simple:/app/public/images/"
     restart: always
 
 volumes:
