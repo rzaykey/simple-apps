@@ -30,7 +30,6 @@ pipeline {
         stage('Code Review') {
             steps {
                 sh'''
-                cd app
                 sonar-scanner   -Dsonar.projectKey=simple-apps   -Dsonar.sources=.   -Dsonar.host.url=http://172.23.3.12:9000   -Dsonar.login=sqp_25e99e53e2f268cbcf152da97906e1923e0d7309
                 '''
             }
